@@ -18,11 +18,11 @@ jobs:
   - job: 'Windows'
     strategy:
       matrix:
-        Node10 Py3.7:
-          nodeVersion: '10.x'
-          pythonVersion: '3.7'
         Node12 Py3.7:
           nodeVersion: '12.x'
+          pythonVersion: '3.7'
+        Node13 Py3.7:
+          nodeVersion: '13.x'
           pythonVersion: '3.7'
     pool:
       vmImage: vs2017-win2016
@@ -38,8 +38,11 @@ jobs:
   - job: 'Linux'
     strategy:
       matrix:
-        Node10 Py3.7:
-          nodeVersion: '10.x'
+        Node12 Py3.7:
+          nodeVersion: '12.x'
+          pythonVersion: '3.7'
+        Node13 Py3.7:
+          nodeVersion: '13.x'
           pythonVersion: '3.7'
     pool:
       vmImage: ubuntu-16.04
@@ -49,8 +52,11 @@ jobs:
   - job: 'MacOS'
     strategy:
       matrix:
-        Node10 Py3.7:
-          nodeVersion: '10.x'
+        Node12 Py3.7:
+          nodeVersion: '12.x'
+          pythonVersion: '3.7'
+        Node13 Py3.7:
+          nodeVersion: '13.x'
           pythonVersion: '3.7'
     pool:
       vmImage: macOS-10.14
